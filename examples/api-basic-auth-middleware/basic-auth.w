@@ -18,14 +18,6 @@ class BasicAuth {
   init(user: str?, password: str?) {
     this.user = user ?? "admin";
     this.password = password ?? "admin";
-
-    let api = new cloud.Api();
-    api.get("/", inflight () => {
-      log("hmm");
-      return {
-        status: 200
-      };
-    });
   }
 
   pub inflight call(req: cloud.ApiRequest): bool {
