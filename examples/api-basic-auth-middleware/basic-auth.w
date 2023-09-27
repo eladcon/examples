@@ -2,6 +2,7 @@ bring cloud;
 
 class Utils {
   extern "./utils.js" pub static inflight base64decode(value: str): str;
+
   extern "./utils.js" pub static inflight base64encode(value: str): str;
   init() { }
 }
