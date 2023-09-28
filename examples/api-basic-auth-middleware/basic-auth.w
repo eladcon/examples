@@ -20,7 +20,7 @@ class BasicAuth {
     this.user = user ?? "admin";
     this.password = password ?? "admin";
 
-    new cloud.Api() as " demo api";
+    let api = new cloud.Api() as " demo api";
     api.get("/", inflight () => {});
   }
 
