@@ -1,9 +1,8 @@
 bring cloud;
 
-class Utils {
+pub class Utils {
   extern "./utils.js" pub static inflight base64decode(value: str): str;
   extern "./utils.js" pub static inflight base64encode(value: str): str;
-
   init() { }
 }
 
@@ -12,7 +11,7 @@ struct Credentials {
   password: str;
 }
 
-class BasicAuth {
+pub class BasicAuth {
   user: str;
   password: str;
 
@@ -51,8 +50,8 @@ class BasicAuth {
   // workaround for https://github.com/winglang/wing/issues/3205
   inflight authHeader(headers: Map<str>?): str {
     if (this.authHeaderPresent(headers)) {
-      let authHeaderOptional = headers?.get("authorization");
-      let var authHeader = headers?.get("Authorization");
+      let authHeaderOptional = headers?.tryGet("authorization");
+      let var authHeader = headers?.tryGet("Authorization");
 
       if (authHeader == nil) {
         authHeader = authHeaderOptional;
