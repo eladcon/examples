@@ -23,7 +23,7 @@ pub class BasicAuth {
     api.get("/", inflight () => {});
   }
 
-  inflight call(req: cloud.ApiRequest): bool {
+  pub inflight call(req: cloud.ApiRequest): bool {
     try {
       let authHeader = this.authHeader(req.headers);
       let credentials = this.authCredentials(authHeader);
