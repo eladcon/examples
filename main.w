@@ -41,6 +41,7 @@ api.get("/hello-middleware", authenticatedMiddleware(inflight (request) => {
 
 let apiUrl = api.url;
 
+
 test "not authenticated" {
   let response = http.get("${apiUrl}/hello-middleware");
   assert(response.status == 401);
