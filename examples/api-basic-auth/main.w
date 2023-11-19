@@ -5,7 +5,7 @@ bring http;
 class Utils {
   extern "./utils.js" pub static inflight base64decode(value: str): str;
   extern "./utils.js" pub static inflight base64encode(value: str): str;
-  init() { }
+  new() { }
 }
 
 struct Credentials {
@@ -17,7 +17,7 @@ class BasicAuth {
   user: str;
   password: str;
 
-  init(user: str?, password: str?) {
+  new(user: str?, password: str?) {
     this.user = user ?? "admin";
     this.password = password ?? "admin";
   }
