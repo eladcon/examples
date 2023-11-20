@@ -2,6 +2,8 @@ bring cloud;
 bring http;
 bring "./basic-auth.w" as auth;
 
+let apiKey = new cloud.Secret(name: "API_KEY");
+
 let basicAuth = new auth.BasicAuth();
 
 // conflicting with ../api-basic-auth/ application
@@ -30,12 +32,14 @@ let authenticatedMiddleware = (handler: inflight (cloud.ApiRequest): cloud.ApiRe
 };
 
 api.get("/hello-middleware", authenticatedMiddleware(inflight (request) => {
+  let apiValue = apiKey.value();
+
   return {
     status: 200,
     headers: {
       "Content-Type" => "text/plain"
     },
-    body: "hello world"
+    body: "hello ${apiValue}"
   };
 }));
 
@@ -58,4 +62,5 @@ test "authenticated" {
   });
 
   assert(response.status == 200);
+  assert(response.body == "hello 12345");
 }
