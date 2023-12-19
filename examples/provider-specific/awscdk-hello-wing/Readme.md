@@ -1,39 +1,39 @@
-# Hello Wing for the AWS CDK Target
+# HELLO WING FOR THE AWS CDK TARGET
 
-The example from the [getting started](https://docs.winglang.io/getting-started/hello) guide.
+THE EXAMPLE FROM THE [GETTING STARTED](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/HELLO) GUIDE.
 
-This is a simple example of a WingLang project that demonstrates the usage of cloud services. The program creates a cloud bucket and a cloud queue. It then adds a consumer to the queue, which writes a message to a file in the bucket.
+THIS IS A SIMPLE EXAMPLE OF A WINGLANG PROJECT THAT DEMONSTRATES THE USAGE OF CLOUD SERVICES. THE PROGRAM CREATES A CLOUD BUCKET AND A CLOUD QUEUE. IT THEN ADDS A CONSUMER TO THE QUEUE, WHICH WRITES A MESSAGE TO A FILE IN THE BUCKET.
 
-![diagram](./diagram.png)
+![DIAGRAM](./DIAGRAM.PNG)
 
-## Prerequisite
+## PREREQUISITE
 
-Please make sure to use a current and working setup of the [wing cli](https://docs.winglang.io/getting-started/installation)
+PLEASE MAKE SURE TO USE A CURRENT AND WORKING SETUP OF THE [WING CLI](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/INSTALLATION)
 
-## Usage
+## USAGE
 
-### Setup
+### SETUP
 
-Nb: In case of a globally installed Wing CLI, the `aws-cdk-lib` package needs to be installed globally as well. See this [issue](https://github.com/winglang/wing/issues/2478) for more details.
-
-```
-npm install
-```
-
-### Wing Console
+NB: IN CASE OF A GLOBALLY INSTALLED WING CLI, THE `AWS-CDK-LIB` PACKAGE NEEDS TO BE INSTALLED GLOBALLY AS WELL. SEE THIS [ISSUE](HTTPS://GITHUB.COM/WINGLANG/WING/ISSUES/2478) FOR MORE DETAILS.
 
 ```
-wing it
+NPM INSTALL
 ```
 
-### Wing Tests
-
-As of May 2023 tests are currently not yet supported out of the box
-
-### Deploy
+### WING CONSOLE
 
 ```
-export CDK_STACK_NAME="hello-wing"
-wing compile -t awscdk main.w
-npx cdk deploy --app "./target/main.awscdk"
+WING IT
+```
+
+### WING TESTS
+
+AS OF MAY 2023 TESTS ARE CURRENTLY NOT YET SUPPORTED OUT OF THE BOX
+
+### DEPLOY
+
+```
+EXPORT CDK_STACK_NAME="HELLO-WING"
+WING COMPILE -T AWSCDK MAIN.W
+NPX CDK DEPLOY --APP "./TARGET/MAIN.AWSCDK"
 ```
