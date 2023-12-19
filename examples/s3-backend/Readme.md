@@ -1,69 +1,69 @@
-# S3 Backend Plugin
+# S3 BACKEND PLUGIN
 
-This guide provides an example of Winglang using a `postSynth` plugin to incorporate an S3 Terraform Backend configuration.
+THIS GUIDE PROVIDES AN EXAMPLE OF WINGLANG USING A `POSTSYNTH` PLUGIN TO INCORPORATE AN S3 TERRAFORM BACKEND CONFIGURATION.
 
-## Overview
+## OVERVIEW
 
-Winglang offers support for a range of [compilation hooks](https://www.winglang.io/docs/tools/compiler-plugins).
+WINGLANG OFFERS SUPPORT FOR A RANGE OF [COMPILATION HOOKS](HTTPS://WWW.WINGLANG.IO/DOCS/TOOLS/COMPILER-PLUGINS).
 
-The [postSynth](https://www.winglang.io/docs/tools/compiler-plugins#postsynth-hook) hook is executed after the artifacts have been synthesized. When compiling to a Terraform-based target, such as `tf-aws`, the hook can access the raw Terraform JSON configuration, facilitating manipulation of the JSON written to the compiled output directory.
+THE [POSTSYNTH](HTTPS://WWW.WINGLANG.IO/DOCS/TOOLS/COMPILER-PLUGINS#POSTSYNTH-HOOK) HOOK IS EXECUTED AFTER THE ARTIFACTS HAVE BEEN SYNTHESIZED. WHEN COMPILING TO A TERRAFORM-BASED TARGET, SUCH AS `TF-AWS`, THE HOOK CAN ACCESS THE RAW TERRAFORM JSON CONFIGURATION, FACILITATING MANIPULATION OF THE JSON WRITTEN TO THE COMPILED OUTPUT DIRECTORY.
 
-## Static Plugin Example
+## STATIC PLUGIN EXAMPLE
 
-The [plugin.static-backend.js](./plugin.static-backend.js) file manipulates the Terraform configuration to utilize an S3 backend, employing environment variables to supply the S3 backend's bucket name, bucket region, and the key for the state file.
+THE [PLUGIN.STATIC-BACKEND.JS](./PLUGIN.STATIC-BACKEND.JS) FILE MANIPULATES THE TERRAFORM CONFIGURATION TO UTILIZE AN S3 BACKEND, EMPLOYING ENVIRONMENT VARIABLES TO SUPPLY THE S3 BACKEND'S BUCKET NAME, BUCKET REGION, AND THE KEY FOR THE STATE FILE.
 
-The following environment variables are used:
+THE FOLLOWING ENVIRONMENT VARIABLES ARE USED:
 
-- `TF_BACKEND_BUCKET`: Specifies the name of the S3 bucket that will store the Terraform state.
-- `TF_BACKEND_BUCKET_REGION`: Specifies the region in which the bucket is hosted.
-- `TF_BACKEND_STATE_FILE`: Specifies the object key for storing the state file.
+- `TF_BACKEND_BUCKET`: SPECIFIES THE NAME OF THE S3 BUCKET THAT WILL STORE THE TERRAFORM STATE.
+- `TF_BACKEND_BUCKET_REGION`: SPECIFIES THE REGION IN WHICH THE BUCKET IS HOSTED.
+- `TF_BACKEND_STATE_FILE`: SPECIFIES THE OBJECT KEY FOR STORING THE STATE FILE.
 
-Ensure these environment variables are set prior to executing the compilation step.
+ENSURE THESE ENVIRONMENT VARIABLES ARE SET PRIOR TO EXECUTING THE COMPILATION STEP.
 
-```bash
-wing compile -t tf-aws --plugins=plugin.static-backend.js main.w
+```BASH
+WING COMPILE -T TF-AWS --PLUGINS=PLUGIN.STATIC-BACKEND.JS MAIN.W
 ```
 
-## Dynamic Plugin Example
+## DYNAMIC PLUGIN EXAMPLE
 
-The [plugin.dynamic-backend.js](./plugin.dynamic-backend.js) file manipulates the Terraform configuration to use an empty S3 backend block. This ensures Terraform selects the appropriate backend, but it requires specific configuration when running terraform init.
-
-```
-wing compile -t tf-aws --plugins=plugin.dynamic-backend.js main.w
-```
-
-### CLI Args Configuration
+THE [PLUGIN.DYNAMIC-BACKEND.JS](./PLUGIN.DYNAMIC-BACKEND.JS) FILE MANIPULATES THE TERRAFORM CONFIGURATION TO USE AN EMPTY S3 BACKEND BLOCK. THIS ENSURES TERRAFORM SELECTS THE APPROPRIATE BACKEND, BUT IT REQUIRES SPECIFIC CONFIGURATION WHEN RUNNING TERRAFORM INIT.
 
 ```
-terraform init \
-  -backend-config="bucket=<mybucket>" \
-  -backend-config="region=<myregion>" \
-  -backend-config="key=my/state/path/s3/key/terraform.tfstate"
+WING COMPILE -T TF-AWS --PLUGINS=PLUGIN.DYNAMIC-BACKEND.JS MAIN.W
 ```
 
-### Configuration File
-
-Create a `config.s3.tfbackend` file in the `target/main.tfaws` folder with the following content:
+### CLI ARGS CONFIGURATION
 
 ```
-bucket = "mybucket"
-region = "eu-central-1"
-key = "my/state/terraform.tfstate"
+TERRAFORM INIT \
+  -BACKEND-CONFIG="BUCKET=<MYBUCKET>" \
+  -BACKEND-CONFIG="REGION=<MYREGION>" \
+  -BACKEND-CONFIG="KEY=MY/STATE/PATH/S3/KEY/TERRAFORM.TFSTATE"
 ```
 
-Then, initialize Terraform with the backend configuration:
+### CONFIGURATION FILE
+
+CREATE A `CONFIG.S3.TFBACKEND` FILE IN THE `TARGET/MAIN.TFAWS` FOLDER WITH THE FOLLOWING CONTENT:
 
 ```
-terraform init --backend-config config.s3.tfbackend
+BUCKET = "MYBUCKET"
+REGION = "EU-CENTRAL-1"
+KEY = "MY/STATE/TERRAFORM.TFSTATE"
 ```
 
-## Summary
+THEN, INITIALIZE TERRAFORM WITH THE BACKEND CONFIGURATION:
 
-This approach is applicable for [other available backends](https://developer.hashicorp.com/terraform/language/settings/backends/configuration#available-backends) in Terraform as well.
+```
+TERRAFORM INIT --BACKEND-CONFIG CONFIG.S3.TFBACKEND
+```
 
-For additional information, refer to the [official](https://developer.hashicorp.com/terraform/language/settings/backends/configuration) Terraform documentation.
+## SUMMARY
 
-Additionally, consider using the [Wing Github Action](https://github.com/winglang/wing-github-action), which largely abstracts these processes.
+THIS APPROACH IS APPLICABLE FOR [OTHER AVAILABLE BACKENDS](HTTPS://DEVELOPER.HASHICORP.COM/TERRAFORM/LANGUAGE/SETTINGS/BACKENDS/CONFIGURATION#AVAILABLE-BACKENDS) IN TERRAFORM AS WELL.
+
+FOR ADDITIONAL INFORMATION, REFER TO THE [OFFICIAL](HTTPS://DEVELOPER.HASHICORP.COM/TERRAFORM/LANGUAGE/SETTINGS/BACKENDS/CONFIGURATION) TERRAFORM DOCUMENTATION.
+
+ADDITIONALLY, CONSIDER USING THE [WING GITHUB ACTION](HTTPS://GITHUB.COM/WINGLANG/WING-GITHUB-ACTION), WHICH LARGELY ABSTRACTS THESE PROCESSES.
 
 
 
