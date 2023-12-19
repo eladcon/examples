@@ -1,27 +1,27 @@
-# HELLO WING
+# hello wing
 
-THE EXAMPLE FROM THE [GETTING STARTED](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/HELLO) GUIDE.
+the example from the [getting started](https://docs.winglang.io/getting-started/hello) guide.
 
-THIS IS A SIMPLE EXAMPLE OF A WINGLANG PROJECT THAT DEMONSTRATES THE USAGE OF CLOUD SERVICES. THE PROGRAM CREATES A CLOUD BUCKET AND A CLOUD QUEUE. IT THEN ADDS A CONSUMER TO THE QUEUE, WHICH WRITES A MESSAGE TO A FILE IN THE BUCKET.
+this is a simple example of a winglang project that demonstrates the usage of cloud services. the program creates a cloud bucket and a cloud queue. it then adds a consumer to the queue, which writes a message to a file in the bucket.
 
-YOU CAN ALSO OPEN THIS IN THE [WING PLAYGROUND](HTTPS://PLAY.WINGLANG.IO/?CODE=YNJPBMCGY2XVDWQ7DQONCMXLDCBIDWNRZXQGPSBUZXCGY2XVDWQUQNVJA2V0KCK7DQPSZXQGCXVLDWUGPSBUZXCGY2XVDWQUUXVLDWUOKTSNCG0KCXVLDWUUYWRKQ29UC3VTZXIOAW5MBGLNAHQGKG1LC3NHZ2U6IHN0CIKGPT4GEW0KICBIDWNRZXQUCHV0KCJ3AW5NLNR4DCISICJIZWXSBYWGJHTTZXNZYWDLFSIPOW0KFSK7)
+you can also open this in the [wing playground](https://play.winglang.io/?code=ynjpbmcgy2xvdwq7dqoncmxldcbidwnrzxqgpsbuzxcgy2xvdwquqnvja2v0kck7dqpszxqgcxvldwugpsbuzxcgy2xvdwquuxvldwuoktsncg0kcxvldwuuywrkq29uc3vtzxioaw5mbglnahqgkg1lc3nhz2u6ihn0cikgpt4gew0kicbidwnrzxquchv0kcj3aw5nlnr4dcisicjizwxsbywgjhttzxnzywdlfsipow0kfsk7)
 
-![DIAGRAM](./DIAGRAM.PNG)
+![diagram](./diagram.png)
 
-## PREREQUISITE
+## prerequisite
 
-PLEASE MAKE SURE TO USE A CURRENT AND WORKING SETUP OF THE [WING CLI](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/INSTALLATION)
+please make sure to use a current and working setup of the [wing cli](https://docs.winglang.io/getting-started/installation)
 
-## USAGE
+## usage
 
-### WING CONSOLE
-
-```
-WING IT
-```
-
-### WING TESTS
+### wing console
 
 ```
-WING TEST --DEBUG  MAIN.W
+wing it
+```
+
+### wing tests
+
+```
+wing test --debug  main.w
 ```
