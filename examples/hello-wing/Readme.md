@@ -1,27 +1,27 @@
-# Hello Wing
+# HELLO WING
 
-The example from the [getting started](https://docs.winglang.io/getting-started/hello) guide.
+THE EXAMPLE FROM THE [GETTING STARTED](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/HELLO) GUIDE.
 
-This is a simple example of a WingLang project that demonstrates the usage of cloud services. The program creates a cloud bucket and a cloud queue. It then adds a consumer to the queue, which writes a message to a file in the bucket.
+THIS IS A SIMPLE EXAMPLE OF A WINGLANG PROJECT THAT DEMONSTRATES THE USAGE OF CLOUD SERVICES. THE PROGRAM CREATES A CLOUD BUCKET AND A CLOUD QUEUE. IT THEN ADDS A CONSUMER TO THE QUEUE, WHICH WRITES A MESSAGE TO A FILE IN THE BUCKET.
 
-You can also open this in the [Wing Playground](https://play.winglang.io/?code=YnJpbmcgY2xvdWQ7DQoNCmxldCBidWNrZXQgPSBuZXcgY2xvdWQuQnVja2V0KCk7DQpsZXQgcXVldWUgPSBuZXcgY2xvdWQuUXVldWUoKTsNCg0KcXVldWUuYWRkQ29uc3VtZXIoaW5mbGlnaHQgKG1lc3NhZ2U6IHN0cikgPT4gew0KICBidWNrZXQucHV0KCJ3aW5nLnR4dCIsICJIZWxsbywgJHttZXNzYWdlfSIpOw0KfSk7)
+YOU CAN ALSO OPEN THIS IN THE [WING PLAYGROUND](HTTPS://PLAY.WINGLANG.IO/?CODE=YNJPBMCGY2XVDWQ7DQONCMXLDCBIDWNRZXQGPSBUZXCGY2XVDWQUQNVJA2V0KCK7DQPSZXQGCXVLDWUGPSBUZXCGY2XVDWQUUXVLDWUOKTSNCG0KCXVLDWUUYWRKQ29UC3VTZXIOAW5MBGLNAHQGKG1LC3NHZ2U6IHN0CIKGPT4GEW0KICBIDWNRZXQUCHV0KCJ3AW5NLNR4DCISICJIZWXSBYWGJHTTZXNZYWDLFSIPOW0KFSK7)
 
-![diagram](./diagram.png)
+![DIAGRAM](./DIAGRAM.PNG)
 
-## Prerequisite
+## PREREQUISITE
 
-Please make sure to use a current and working setup of the [wing cli](https://docs.winglang.io/getting-started/installation)
+PLEASE MAKE SURE TO USE A CURRENT AND WORKING SETUP OF THE [WING CLI](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/INSTALLATION)
 
-## Usage
+## USAGE
 
-### Wing Console
-
-```
-wing it
-```
-
-### Wing Tests
+### WING CONSOLE
 
 ```
-wing test --debug  main.w
+WING IT
+```
+
+### WING TESTS
+
+```
+WING TEST --DEBUG  MAIN.W
 ```
