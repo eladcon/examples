@@ -1,28 +1,28 @@
-# Static Website
+# STATIC WEBSITE
 
-This is a [Static Website](https://www.winglang.io/docs/standard-library/cloud/website) example in combination with an [API](https://www.winglang.io/docs/standard-library/cloud/api). The [./static](./static/index.html) page is using [htmx](https://htmx.org/) to dynamically fetch an HTML snippet with value dervied from a [Counter](https://www.winglang.io/docs/standard-library/cloud/counter). Since Website and API are served via different domains, the API is CORS enabled.
+THIS IS A [STATIC WEBSITE](HTTPS://WWW.WINGLANG.IO/DOCS/STANDARD-LIBRARY/CLOUD/WEBSITE) EXAMPLE IN COMBINATION WITH AN [API](HTTPS://WWW.WINGLANG.IO/DOCS/STANDARD-LIBRARY/CLOUD/API). THE [./STATIC](./STATIC/INDEX.HTML) PAGE IS USING [HTMX](HTTPS://HTMX.ORG/) TO DYNAMICALLY FETCH AN HTML SNIPPET WITH VALUE DERVIED FROM A [COUNTER](HTTPS://WWW.WINGLANG.IO/DOCS/STANDARD-LIBRARY/CLOUD/COUNTER). SINCE WEBSITE AND API ARE SERVED VIA DIFFERENT DOMAINS, THE API IS CORS ENABLED.
 
-![diagram](./diagram.png)
+![DIAGRAM](./DIAGRAM.PNG)
 
-## Prerequisite
+## PREREQUISITE
 
-Please make sure to use a current and working setup of the [wing cli](https://docs.winglang.io/getting-started/installation)
+PLEASE MAKE SURE TO USE A CURRENT AND WORKING SETUP OF THE [WING CLI](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/INSTALLATION)
 
-## Usage
+## USAGE
 
-### Wing Console
-
-```
-wing it
-```
-
-Get the URL from the Website and open it in the browser.
-
-![console](./console.png)
-![browser](./browser.png)
-
-### Wing Tests
+### WING CONSOLE
 
 ```
-wing test --debug  main.w
+WING IT
+```
+
+GET THE URL FROM THE WEBSITE AND OPEN IT IN THE BROWSER.
+
+![CONSOLE](./CONSOLE.PNG)
+![BROWSER](./BROWSER.PNG)
+
+### WING TESTS
+
+```
+WING TEST --DEBUG  MAIN.W
 ```
