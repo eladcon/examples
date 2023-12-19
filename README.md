@@ -1,36 +1,36 @@
-# Winglang Examples
+# WINGLANG EXAMPLES
 
-This repo contains full examples, tested against the most recent releases of Winglang. It serves as a showcase repo for real world use-cases.
-
-
-## Examples
-
-### Wing - Generic
-
-- [Hello Wing](./examples/hello-wing)
-- [HTTP Api Basic Auth](./examples/api-basic-auth/)
-- [HTTP Api Basic Auth with Middleware](./examples/api-basic-auth-middleware/)
-- [HTTP Api Server Side Rendered HTML](./examples/api-counter-ssr/)
-- [Static Website using htmx with CORS API](./examples/static-website/)
-- [Simple Stock Poller](./examples/stock-poller/)
-- [Redis](./examples/redis)
-- [S3 Backend](./examples/s3-backend)
-- [Terraform Backend](https://github.com/winglang/terraform-backend) (dedicated repository)
-
-### Wing - Provider Specific
-
-- [AWS CDK Hello World](./examples/provider-specific/awscdk-hello-wing)
-- [AWS CDK Docker Function](./examples/provider-specific/awscdk-docker-python-lambda)
-- [Terraform Module](./examples/provider-specific/cdktf-terraform-hcl-module)
-- [Github AWS OIDC Setup](https://github.com/winglang/github-aws-oidc) (dedicated repository)
+THIS REPO CONTAINS FULL EXAMPLES, TESTED AGAINST THE MOST RECENT RELEASES OF WINGLANG. IT SERVES AS A SHOWCASE REPO FOR REAL WORLD USE-CASES.
 
 
-## Contributing 🤝
+## EXAMPLES
 
-Want to help Wing take flight? Check out our [contribution](https://github.com/winglang/wing/blob/main/CONTRIBUTING.md) guide to learn how to set up a development environment and contribute to the project. We appreciate your support and look forward to learning and building together.
+### WING - GENERIC
 
-For additional examples please go ahead and create a pull request in this repository.
+- [HELLO WING](./EXAMPLES/HELLO-WING)
+- [HTTP API BASIC AUTH](./EXAMPLES/API-BASIC-AUTH/)
+- [HTTP API BASIC AUTH WITH MIDDLEWARE](./EXAMPLES/API-BASIC-AUTH-MIDDLEWARE/)
+- [HTTP API SERVER SIDE RENDERED HTML](./EXAMPLES/API-COUNTER-SSR/)
+- [STATIC WEBSITE USING HTMX WITH CORS API](./EXAMPLES/STATIC-WEBSITE/)
+- [SIMPLE STOCK POLLER](./EXAMPLES/STOCK-POLLER/)
+- [REDIS](./EXAMPLES/REDIS)
+- [S3 BACKEND](./EXAMPLES/S3-BACKEND)
+- [TERRAFORM BACKEND](HTTPS://GITHUB.COM/WINGLANG/TERRAFORM-BACKEND) (DEDICATED REPOSITORY)
 
-## License 📜
+### WING - PROVIDER SPECIFIC
 
-Wing is licensed under the [MIT License](./LICENSE). Contributions are made under our [contribution license](https://docs.winglang.io/terms-and-policies/contribution-license.html).
+- [AWS CDK HELLO WORLD](./EXAMPLES/PROVIDER-SPECIFIC/AWSCDK-HELLO-WING)
+- [AWS CDK DOCKER FUNCTION](./EXAMPLES/PROVIDER-SPECIFIC/AWSCDK-DOCKER-PYTHON-LAMBDA)
+- [TERRAFORM MODULE](./EXAMPLES/PROVIDER-SPECIFIC/CDKTF-TERRAFORM-HCL-MODULE)
+- [GITHUB AWS OIDC SETUP](HTTPS://GITHUB.COM/WINGLANG/GITHUB-AWS-OIDC) (DEDICATED REPOSITORY)
+
+
+## CONTRIBUTING 🤝
+
+WANT TO HELP WING TAKE FLIGHT? CHECK OUT OUR [CONTRIBUTION](HTTPS://GITHUB.COM/WINGLANG/WING/BLOB/MAIN/CONTRIBUTING.MD) GUIDE TO LEARN HOW TO SET UP A DEVELOPMENT ENVIRONMENT AND CONTRIBUTE TO THE PROJECT. WE APPRECIATE YOUR SUPPORT AND LOOK FORWARD TO LEARNING AND BUILDING TOGETHER.
+
+FOR ADDITIONAL EXAMPLES PLEASE GO AHEAD AND CREATE A PULL REQUEST IN THIS REPOSITORY.
+
+## LICENSE 📜
+
+WING IS LICENSED UNDER THE [MIT LICENSE](./LICENSE). CONTRIBUTIONS ARE MADE UNDER OUR [CONTRIBUTION LICENSE](HTTPS://DOCS.WINGLANG.IO/TERMS-AND-POLICIES/CONTRIBUTION-LICENSE.HTML).
