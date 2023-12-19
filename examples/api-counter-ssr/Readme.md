@@ -1,30 +1,30 @@
-# HTTP API SERVER SIDE RENDERED HTML
+# http api server side rendered html
 
-THIS IS A [HTTP API](HTTPS://WWW.WINGLANG.IO/DOCS/STANDARD-LIBRARY/CLOUD/API) EXAMPLE RENDERING A HTML TEMPLATE FROM A [BUCKET](HTTPS://WWW.WINGLANG.IO/DOCS/STANDARD-LIBRARY/CLOUD/BUCKET). IT'S MAKING USE OF [EXTERNAL](HTTPS://WWW.WINGLANG.IO/DOCS/LANGUAGE-REFERENCE#52-JAVASCRIPT) JAVASCRIPT - IN THIS CASE READING THE TEMPLATE (PREFLIGHT) AND RENDERING IT (INFLIGHT).
+this is a [http api](https://www.winglang.io/docs/standard-library/cloud/api) example rendering a html template from a [bucket](https://www.winglang.io/docs/standard-library/cloud/bucket). it's making use of [external](https://www.winglang.io/docs/language-reference#52-javascript) javascript - in this case reading the template (preflight) and rendering it (inflight).
 
-SINCE THIS EXAMPLE MAKES USE OF EXTERNAL JAVASCRIPT, IT WON'T RUN IN THE [WING PLAYGROUND](HTTPS://WWW.WINGLANG.IO/PLAY) YET.
+since this example makes use of external javascript, it won't run in the [wing playground](https://www.winglang.io/play) yet.
 
-![DIAGRAM](./DIAGRAM.PNG)
+![diagram](./diagram.png)
 
-## PREREQUISITE
+## prerequisite
 
-PLEASE MAKE SURE TO USE A CURRENT AND WORKING SETUP OF THE [WING CLI](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/INSTALLATION)
+please make sure to use a current and working setup of the [wing cli](https://docs.winglang.io/getting-started/installation)
 
-## USAGE
+## usage
 
-### WING CONSOLE
-
-```
-WING IT
-```
-
-GET THE URL FROM THE API AND OPEN IT IN THE BROWSER. EACH PAGE RELOAD WILL INCREASE THE COUNTER.
-
-![CONSOLE](./CONSOLE.PNG)
-![BROWSER](./BROWSER.PNG)
-
-### WING TESTS
+### wing console
 
 ```
-WING TEST --DEBUG  MAIN.W
+wing it
+```
+
+get the url from the api and open it in the browser. each page reload will increase the counter.
+
+![console](./console.png)
+![browser](./browser.png)
+
+### wing tests
+
+```
+wing test --debug  main.w
 ```
