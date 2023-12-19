@@ -1,52 +1,52 @@
-# Simple Stock Poller
+# SIMPLE STOCK POLLER
 
-This is an example for a simple stock polling application, that retrieves data from [Twelve Data API](https://twelvedata.com/), stores the latest stock price in DynamoDB and publishes the update to a SQS queue.
+THIS IS AN EXAMPLE FOR A SIMPLE STOCK POLLING APPLICATION, THAT RETRIEVES DATA FROM [TWELVE DATA API](HTTPS://TWELVEDATA.COM/), STORES THE LATEST STOCK PRICE IN DYNAMODB AND PUBLISHES THE UPDATE TO A SQS QUEUE.
 
-![Overview](./overview.png)
+![OVERVIEW](./OVERVIEW.PNG)
 
-It show case the capabilities of Wing to fetch data from an external API and distribute this across different systems.
+IT SHOW CASE THE CAPABILITIES OF WING TO FETCH DATA FROM AN EXTERNAL API AND DISTRIBUTE THIS ACROSS DIFFERENT SYSTEMS.
 
-![Sequence Diagram](./sequence-diagram.png)
+![SEQUENCE DIAGRAM](./SEQUENCE-DIAGRAM.PNG)
 
-To extend this example, try making the polling application track five ticket symbols, or try displaying the information using the cloud.Website class
+TO EXTEND THIS EXAMPLE, TRY MAKING THE POLLING APPLICATION TRACK FIVE TICKET SYMBOLS, OR TRY DISPLAYING THE INFORMATION USING THE CLOUD.WEBSITE CLASS
 
-## Prerequisite
+## PREREQUISITE
 
-Please make sure to use a current and working setup of the [wing cli](https://docs.winglang.io/getting-started/installation)
+PLEASE MAKE SURE TO USE A CURRENT AND WORKING SETUP OF THE [WING CLI](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/INSTALLATION)
 
-## Usage
+## USAGE
 
-As the Scheduler component is only available with the `sim` and `tf-aws` provider, you do have to compile and then deploy the application.
-For more details see also [Wing compatability matrix](https://www.winglang.io/docs/standard-library/compatibility-matrix).
+AS THE SCHEDULER COMPONENT IS ONLY AVAILABLE WITH THE `SIM` AND `TF-AWS` PROVIDER, YOU DO HAVE TO COMPILE AND THEN DEPLOY THE APPLICATION.
+FOR MORE DETAILS SEE ALSO [WING COMPATABILITY MATRIX](HTTPS://WWW.WINGLANG.IO/DOCS/STANDARD-LIBRARY/COMPATIBILITY-MATRIX).
 
-### Wing Console
-
-```
-wing it
-```
-
-To test the application in the Wing Console, you have to set up a secret at `~/.wing/secrets.json`. For more details refer to [Secrets with the Simulator target](https://www.winglang.io/docs/standard-library/cloud/secret#simulator-sim).
-
-### Wing compile
+### WING CONSOLE
 
 ```
-wing compile --target tf-aws main.w
-
-cd target/main.tfaws
+WING IT
 ```
 
-### Initialization
-For your first deployment you have to initialize Terraform in the working directory:
+TO TEST THE APPLICATION IN THE WING CONSOLE, YOU HAVE TO SET UP A SECRET AT `~/.WING/SECRETS.JSON`. FOR MORE DETAILS REFER TO [SECRETS WITH THE SIMULATOR TARGET](HTTPS://WWW.WINGLANG.IO/DOCS/STANDARD-LIBRARY/CLOUD/SECRET#SIMULATOR-SIM).
+
+### WING COMPILE
+
 ```
-terraform init
+WING COMPILE --TARGET TF-AWS MAIN.W
+
+CD TARGET/MAIN.TFAWS
 ```
 
-And you also need to create the secret in [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), refer also to [documentation of `cloud.secret` for AWS as target](https://www.winglang.io/docs/standard-library/cloud/secret#aws-tf-aws-and-awscdk).
+### INITIALIZATION
+FOR YOUR FIRST DEPLOYMENT YOU HAVE TO INITIALIZE TERRAFORM IN THE WORKING DIRECTORY:
 ```
-aws secretsmanager create-secret --name twelve-data-api-key --secret-string your_api_key
+TERRAFORM INIT
 ```
 
-### Wing deploy
+AND YOU ALSO NEED TO CREATE THE SECRET IN [AWS SECRETS MANAGER](HTTPS://DOCS.AWS.AMAZON.COM/SECRETSMANAGER/LATEST/USERGUIDE/INTRO.HTML), REFER ALSO TO [DOCUMENTATION OF `CLOUD.SECRET` FOR AWS AS TARGET](HTTPS://WWW.WINGLANG.IO/DOCS/STANDARD-LIBRARY/CLOUD/SECRET#AWS-TF-AWS-AND-AWSCDK).
 ```
-terraform apply
+AWS SECRETSMANAGER CREATE-SECRET --NAME TWELVE-DATA-API-KEY --SECRET-STRING YOUR_API_KEY
+```
+
+### WING DEPLOY
+```
+TERRAFORM APPLY
 ```
