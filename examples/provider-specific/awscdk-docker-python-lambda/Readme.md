@@ -1,35 +1,35 @@
-# Docker based AWS Lambda Function for the AWS CDK Target
+# DOCKER BASED AWS LAMBDA FUNCTION FOR THE AWS CDK TARGET
 
-This isn't leveraging the Wing SDK, but using Constructs from the AWS CDK directly via [bring](https://docs.winglang.io/reference/spec#4-module-system). That's why the [package.json](./package.json) file is present and referencing the `aws-cdk-lib` package.
+THIS ISN'T LEVERAGING THE WING SDK, BUT USING CONSTRUCTS FROM THE AWS CDK DIRECTLY VIA [BRING](HTTPS://DOCS.WINGLANG.IO/REFERENCE/SPEC#4-MODULE-SYSTEM). THAT'S WHY THE [PACKAGE.JSON](./PACKAGE.JSON) FILE IS PRESENT AND REFERENCING THE `AWS-CDK-LIB` PACKAGE.
 
-This is largely based on an example by [Marcio Cruz](https://github.com/marciocadev) who contributed the AWS CDK provider for wing.
+THIS IS LARGELY BASED ON AN EXAMPLE BY [MARCIO CRUZ](HTTPS://GITHUB.COM/MARCIOCADEV) WHO CONTRIBUTED THE AWS CDK PROVIDER FOR WING.
 
-## Prerequisite
+## PREREQUISITE
 
-Please make sure to use a current and working setup of the [wing cli](https://docs.winglang.io/getting-started/installation).
+PLEASE MAKE SURE TO USE A CURRENT AND WORKING SETUP OF THE [WING CLI](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/INSTALLATION).
 
-## Usage
+## USAGE
 
-### Setup
+### SETUP
 
-Nb: In case of a globally installed Wing CLI, the `aws-cdk-lib` package needs to be installed globally as well. See this [issue](https://github.com/winglang/wing/issues/2478) for more details.
-
-```
-npm install
-```
-
-### Wing Console
-
-As of May 2023 the Wing Console is not yet supported.
-
-### Wing Tests
-
-As of May 2023 tests are not yet supported out of the box
-
-### Deploy
+NB: IN CASE OF A GLOBALLY INSTALLED WING CLI, THE `AWS-CDK-LIB` PACKAGE NEEDS TO BE INSTALLED GLOBALLY AS WELL. SEE THIS [ISSUE](HTTPS://GITHUB.COM/WINGLANG/WING/ISSUES/2478) FOR MORE DETAILS.
 
 ```
-export CDK_STACK_NAME="wing-docker-python-lambda"
-wing compile -t awscdk main.w
-npx cdk deploy --app "./target/main.awscdk"
+NPM INSTALL
+```
+
+### WING CONSOLE
+
+AS OF MAY 2023 THE WING CONSOLE IS NOT YET SUPPORTED.
+
+### WING TESTS
+
+AS OF MAY 2023 TESTS ARE NOT YET SUPPORTED OUT OF THE BOX
+
+### DEPLOY
+
+```
+EXPORT CDK_STACK_NAME="WING-DOCKER-PYTHON-LAMBDA"
+WING COMPILE -T AWSCDK MAIN.W
+NPX CDK DEPLOY --APP "./TARGET/MAIN.AWSCDK"
 ```
