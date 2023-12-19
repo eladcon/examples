@@ -1,25 +1,25 @@
-# HTTP API with Basic Auth
+# HTTP API WITH BASIC AUTH
 
-This is a [HTTP API](https://www.winglang.io/docs/standard-library/cloud/api)  example authenticating with Basic Auth. It's also making use of leveraging [external](https://www.winglang.io/docs/language-reference#52-javascript) Javascript - in this case for base64 en/decoding. Last but not least, it's encapsulating the Basic Authentication functionality into a dedicated [class](https://www.winglang.io/docs/examples/classes).
+THIS IS A [HTTP API](HTTPS://WWW.WINGLANG.IO/DOCS/STANDARD-LIBRARY/CLOUD/API)  EXAMPLE AUTHENTICATING WITH BASIC AUTH. IT'S ALSO MAKING USE OF LEVERAGING [EXTERNAL](HTTPS://WWW.WINGLANG.IO/DOCS/LANGUAGE-REFERENCE#52-JAVASCRIPT) JAVASCRIPT - IN THIS CASE FOR BASE64 EN/DECODING. LAST BUT NOT LEAST, IT'S ENCAPSULATING THE BASIC AUTHENTICATION FUNCTIONALITY INTO A DEDICATED [CLASS](HTTPS://WWW.WINGLANG.IO/DOCS/EXAMPLES/CLASSES).
 
-Since this example makes use of external Javascript, it won't run in the [Wing Playground](https://www.winglang.io/play) yet.
+SINCE THIS EXAMPLE MAKES USE OF EXTERNAL JAVASCRIPT, IT WON'T RUN IN THE [WING PLAYGROUND](HTTPS://WWW.WINGLANG.IO/PLAY) YET.
 
-![diagram](./diagram.png)
+![DIAGRAM](./DIAGRAM.PNG)
 
-## Prerequisite
+## PREREQUISITE
 
-Please make sure to use a current and working setup of the [wing cli](https://docs.winglang.io/getting-started/installation)
+PLEASE MAKE SURE TO USE A CURRENT AND WORKING SETUP OF THE [WING CLI](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/INSTALLATION)
 
-## Usage
+## USAGE
 
-### Wing Console
-
-```
-wing it
-```
-
-### Wing Tests
+### WING CONSOLE
 
 ```
-wing test --debug  main.w
+WING IT
+```
+
+### WING TESTS
+
+```
+WING TEST --DEBUG  MAIN.W
 ```
