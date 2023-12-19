@@ -1,27 +1,27 @@
-# Using a Terraform HCL Module
+# USING A TERRAFORM HCL MODULE
 
-This demonstrates how any existing Terraform [module](https://developer.hashicorp.com/terraform/language/modules/sources) can be used as part of a Wing application.
+THIS DEMONSTRATES HOW ANY EXISTING TERRAFORM [MODULE](HTTPS://DEVELOPER.HASHICORP.COM/TERRAFORM/LANGUAGE/MODULES/SOURCES) CAN BE USED AS PART OF A WING APPLICATION.
 
-![diagram](./diagram.png)
+![DIAGRAM](./DIAGRAM.PNG)
 
-## Prerequisite
+## PREREQUISITE
 
-Please make sure to use a current and working setup of the [wing cli](https://docs.winglang.io/getting-started/installation)
+PLEASE MAKE SURE TO USE A CURRENT AND WORKING SETUP OF THE [WING CLI](HTTPS://DOCS.WINGLANG.IO/GETTING-STARTED/INSTALLATION)
 
-## Usage
+## USAGE
 
-Since this is not using the Wing SDK, it needs to be tested via the `tf-aws` target.
+SINCE THIS IS NOT USING THE WING SDK, IT NEEDS TO BE TESTED VIA THE `TF-AWS` TARGET.
 
-### Wing Console
+### WING CONSOLE
 
-This will show you the diagram, but there's no interaction possible.
-
-```
-wing it
-```
-
-### Wing Tests
+THIS WILL SHOW YOU THE DIAGRAM, BUT THERE'S NO INTERACTION POSSIBLE.
 
 ```
-wing test -t tf-aws --debug  main.w
+WING IT
+```
+
+### WING TESTS
+
+```
+WING TEST -T TF-AWS --DEBUG  MAIN.W
 ```
